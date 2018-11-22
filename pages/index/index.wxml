@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="userinfo">
 	<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-	<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	<text class="userinfo-nickname">亲爱的{{userInfo.nickName}}用户{{nowDate}}</text>
 	<view class="usermotto">
 		<text class="user-motto">{{motto}}</text>
 	</view>

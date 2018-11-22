@@ -1,21 +1,27 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var util = require('../../utils/util.js');
 
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    hasUserInfo: false,
+    nowDate: null,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
+    var myDate = new Date();
+    var hour = myDate.getHours();
+    console.log(hour);
+    
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
+    this.setData({
+      nowDate: time
+    });
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
