@@ -1,29 +1,32 @@
 <!-- index.wxml -->
-<view class="userinfo">
-	<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-	<text class="userinfo-nickname">亲爱的{{userInfo.nickName}}用户{{nowDate}}</text>
-	<view class="usermotto">
-		<text class="user-motto">{{motto}}</text>
+<view class="content">
+	<view class="userinfo">
+		<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+		<text class="userinfo-nickname">亲爱的{{userInfo.nickName}}用户</text>
+		<view class="usermotto">
+			<text class="user-motto">{{nowDate}}</text>
+		</view>
 	</view>
-</view>
 
-<view class="question">
-	<view class="question-list">
-		<view class="question-des">
-			<text class="des">1.人们常用“起死回生”“妙手回春”来称赞医生的医术高明，从哲学上看，这些话的作用在于( )。</text>
+	<view class="question">
+		<view class="question-list">
+			<view class="question-desc">
+				<text class="desc">{{question.desc}}</text>
+			</view>
+			<view class="question-choose">
+				<text class="choose">{{question.choose}}</text>
+			</view>
+			<view class="question-answer">
+				<text class="answer">{{question.answer}}</text>
+			</view>
 		</view>
-		<view class="question-choose">
-			<text class="choose">
-			A.内因是事物发展的根据 
-			B.内因能够加速或者延缓事物的发展进程
-			C.外因在事物发展进程中起决定作用 
-			D.外因能够加速或者延缓事物的发展进程
-			</text>
-		</view>
-		<view class="question-answer">
-			<text class="answer">
-			【答案】D
-【中公解析】内因是事物变化发展的根据，外因是事物变化发展的条件，外因通过内因起作用，共同推动事物的发展。在本题中，“起死回生”“妙手回春”是外因，能够加速或者延缓事物的发展进程。故本题答案选D</text>
-		</view>
+	</view>
+	<view class="tab-bar" id="{{question.id}}" bindtap="changeQuestion">
+	<!-- <button class="page-button-pre" id="pre"   bindtap="changeQuestion">上一题</button> -->
+		<button class="page-button-pre" id="pre">上一题</button>
+		<!-- <button class="page-button-next" id="next"  bindtap="changeQuestion">下一题</button> -->
+		<button class="page-button-next" id="next">下一题</button>
+		<!-- <button class="page-button-save" id="save"  bindtap="changeQuestion">添加书签</button> -->
+		<button class="page-button-save" id="save">添加书签</button>
 	</view>
 </view>

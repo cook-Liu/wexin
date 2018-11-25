@@ -1,8 +1,22 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
+.content {
+  height: 100%;
+  display: block;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  background: #dcdcdc;
+  width: 100%;
+}
+.userinfo {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3366cc;
+  height: 200rpx;
+ 
 }
 
 .userinfo-avatar {
@@ -13,9 +27,70 @@
 }
 
 .userinfo-nickname {
+  /* display: block; */
   color: #aaa;
+  text-align: center;
+  /* margin-top: -100rpx; */
+  position: relative;
+  bottom: 100rpx;
+
+  
 }
 
 .usermotto {
-  /* margin-top: 200px; */
+  /* display: block; */
+  text-align: center;
+  position: relative;
+  bottom: 80rpx;
+}
+
+.tab-bar {
+  /* background: #dcdcdc; */
+  margin-top: 40rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.question {
+  display: block;
+  margin-top: 50rpx;
+}
+
+.question-desc {
+  display: block;
+  margin-bottom: 60rpx;
+}
+
+.question-choose {
+  display: block;
+  margin-bottom: 60rpx;
+}
+
+.question-answer {
+  display: block;
+  margin-bottom: 70rpx;
+}
+
+button{
+  background-color: #3366cc;
+  height: auto;
+  width: 200rpx;
+  color: aliceblue;
+  font-size: 4vw;
+}
+
+.page-button-pre {
+  float: left;
+  margin-left: 10rpx;
+}
+
+.page-button-next {
+  float: right;
+  margin-right: 10rpx;
+}
+
+.page-button-save {
+  float: inherit;
+  /* margin-right: 10rpx; */
 }
