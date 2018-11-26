@@ -35,11 +35,11 @@ Page({
       this.setData({
         nowDate: '中午好'
       })
-    }else if (hour >=14  && hour<= 18) {
+    }else if (hour >=14  && hour<= 17) {
       this.setData({
         nowDate: '下午好'
       })
-    }else if (hour >= 19 && hour<= 22) {
+    }else if (hour >= 18 && hour<= 22) {
       this.setData({
         nowDate: '晚上好'
       })

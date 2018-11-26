@@ -21,12 +21,15 @@
 			</view>
 		</view>
 	</view>
-	<view class="tab-bar" id="{{question.id}}" bindtap="changeQuestion">
-	<!-- <button class="page-button-pre" id="pre"   bindtap="changeQuestion">上一题</button> -->
-		<button class="page-button-pre" id="pre">上一题</button>
-		<!-- <button class="page-button-next" id="next"  bindtap="changeQuestion">下一题</button> -->
-		<button class="page-button-next" id="next">下一题</button>
-		<!-- <button class="page-button-save" id="save"  bindtap="changeQuestion">添加书签</button> -->
-		<button class="page-button-save" id="save">添加书签</button>
+	<view class="tab-bar">
+	<button class="page-button-pre" id="pre" data-id="{{question.id}}"  bindtap="changeQuestion">上一题</button>
+		<!-- <block wx:if="{{question.id != 1}}"> -->
+			<!-- <button class="page-button-pre" id="pre">上一题</button> -->
+		<button class="page-button-next" id="next" data-id="{{question.id}}" bindtap="changeQuestion">下一题</button>
+		<button class="page-button-save" id="save" data-id="{{question.id}}" bindtap="changeQuestion">添加书签</button>
+			<!-- <button class="page-button-save" id="save">添加书签</button> -->
+		<!-- </block> -->
+		
+		<!-- <button class="page-button-next" id="next">下一题</button> -->
 	</view>
 </view>
