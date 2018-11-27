@@ -29,6 +29,11 @@ App({
               }
             }
           })
+        }else{
+          // console.log('dfg');
+          wx.redirectTo({
+            url: 'pages/auth/auth',
+          });
         }
       }
     })
